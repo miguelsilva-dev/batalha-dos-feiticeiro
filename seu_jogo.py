@@ -28,7 +28,7 @@ ARQUIVOS_NECESSARIOS = [
 # --- CONSTANTES GERAIS E DE CONFIGURAÇÃO DO JOGO ---
 ASSETS_PATH = 'assets'
 FEITICOS = {
-    1: {"nome": "Bola de Fogo", "dano": 35, "mana": 15, "efeito": "queimadura", "sprite": "fogo.png"},
+    1: {"nome": "Bola de Fogo", "dano": 35, "mana": 13, "efeito": "queimadura", "sprite": "fogo.png"},
     2: {"nome": "Raio Congelante", "dano": 25, "mana": 12, "efeito": "congelamento", "sprite": "gelo.png"},
     3: {"nome": "Chuva de Meteoros", "dano": 55, "mana": 25, "efeito": None, "sprite": "fogo.png"},
     4: {"nome": "Lança de Gelo", "dano": 30, "mana": 18, "efeito": None, "sprite": "gelo.png"},
@@ -120,6 +120,7 @@ class GameLogic:
             return f"⚔️ {self.inimigo.nome} apareceu para a batalha!", None
 
     def processar_vitoria(self):
+        """Processa a vitória do jogador..."""
         self.batalhas_vencidas += 1
         exp_base = 25 + self.inimigo.vida_max // 10; ouro_base = 15 + self.inimigo.vida_max // 15
         if self.inimigo.tipo == "boss": exp_base = int(exp_base * 2.5); ouro_base = int(ouro_base * 3)
@@ -477,7 +478,7 @@ class BatalhaGUI:
         self.btn_pocao_vida.config(text=f"❤️ Poção de Vida ({self.jogador.pocoes_vida})")
         self.btn_pocao_mana.config(text=f"💧 Poção de Mana ({self.jogador.pocoes_mana})")
         self.posicionar_personagens(); self.root.update_idletasks()
-
+        status_jogador_txt += f"   💰 ouro: {self.jogador.ouro}"
 # --- PONTO DE ENTRADA PRINCIPAL ---
 if __name__ == "__main__":
     arquivos_problematicos = verificar_arquivos(ARQUIVOS_NECESSARIOS)
