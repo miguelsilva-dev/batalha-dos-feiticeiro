@@ -28,7 +28,7 @@ ARQUIVOS_NECESSARIOS = [
 # --- CONSTANTES GERAIS E DE CONFIGURAÇÃO DO JOGO ---
 ASSETS_PATH = 'assets'
 FEITICOS = {
-    1: {"nome": "Bola de Fogo", "dano": 35, "mana": 15, "efeito": "queimadura", "sprite": "fogo.png"},
+    1: {"nome": "Bola de Fogo", "dano": 35, "mana": 13, "efeito": "queimadura", "sprite": "fogo.png"},
     2: {"nome": "Raio Congelante", "dano": 25, "mana": 12, "efeito": "congelamento", "sprite": "gelo.png"},
     3: {"nome": "Chuva de Meteoros", "dano": 55, "mana": 25, "efeito": None, "sprite": "fogo.png"},
     4: {"nome": "Lança de Gelo", "dano": 30, "mana": 18, "efeito": None, "sprite": "gelo.png"},
