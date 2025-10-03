@@ -120,6 +120,7 @@ class GameLogic:
             return f"⚔️ {self.inimigo.nome} apareceu para a batalha!", None
 
     def processar_vitoria(self):
+        """Processa a vitória do jogador..."""
         self.batalhas_vencidas += 1
         exp_base = 25 + self.inimigo.vida_max // 10; ouro_base = 15 + self.inimigo.vida_max // 15
         if self.inimigo.tipo == "boss": exp_base = int(exp_base * 2.5); ouro_base = int(ouro_base * 3)
