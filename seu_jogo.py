@@ -478,7 +478,7 @@ class BatalhaGUI:
         self.btn_pocao_vida.config(text=f"❤️ Poção de Vida ({self.jogador.pocoes_vida})")
         self.btn_pocao_mana.config(text=f"💧 Poção de Mana ({self.jogador.pocoes_mana})")
         self.posicionar_personagens(); self.root.update_idletasks()
-
+        status_jogador_txt += f"   💰 ouro: {self.jogador.ouro}"
 # --- PONTO DE ENTRADA PRINCIPAL ---
 if __name__ == "__main__":
     arquivos_problematicos = verificar_arquivos(ARQUIVOS_NECESSARIOS)
